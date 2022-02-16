@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 //changed from PHPUnit's TestCase to include Laravel TestCase's createApplication method
 use Tests\TestCase;
 use wapmorgan\Mp3Info\Mp3Info;
