@@ -106,6 +106,7 @@ import * as musicMetadata from 'music-metadata-browser';
                 .then(json => {
                     // set the response data
                     this.songs = json;
+                    console.log(json);
                     this.currentSong = this.songs[this.index]
                     this.audio.src = this.currentSong.src
                     this.audio.volume = this.volume / 100
@@ -176,6 +177,7 @@ import * as musicMetadata from 'music-metadata-browser';
                 })
                 .then(json => {
                     // set the response data
+                    // TEMP: testing for data coherency
                     console.log(json)
                 })
             }

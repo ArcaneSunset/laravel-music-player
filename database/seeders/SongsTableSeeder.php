@@ -39,7 +39,7 @@ class SongsTableSeeder extends Seeder
                 'cover' =>  '/storage/img/mp3_fallback.png'
             ]
         );
-
-        Song::insert($songs);
+        foreach($songs as $song)
+        Song::factory()->create($song);
     }
 }

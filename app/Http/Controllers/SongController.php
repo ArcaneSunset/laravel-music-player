@@ -46,7 +46,8 @@ class SongController extends Controller
     public function parseId3($path = null)
     {
         if(!$path)
-            $path = '/var/www/music-player/public/storage/audio/Carcass - Heartwork.mp3';
+            $path = '/var/www/music-player/public/storage/audio/farewell-mountaineer.mp3';
+        
         $mp3 = new Mp3Info($path, true);
 
         $array = $this->songRepository->idTwo($mp3->tags2);
