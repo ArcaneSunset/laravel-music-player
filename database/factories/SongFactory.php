@@ -29,7 +29,7 @@ class SongFactory extends Factory
         return [
             'title' => $title,
             'artist' => $artist,
-            'src' => '/storage/audio/'.$filename,
+            'src' => '/storage/audio/'.$filename.'.mp3',
             'cover' =>  '/storage/img/mp3_fallback.png'
         ];
     }

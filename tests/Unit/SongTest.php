@@ -3,10 +3,12 @@
 namespace Tests\Unit;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+//changed from PHPUnit's TestCase to include Laravel TestCase's createApplication method
 use Tests\TestCase;
 use wapmorgan\Mp3Info\Mp3Info;
 use App\Models\Song;
 use Mockery;
+use Illuminate\Support\Str;
 
 class SongTest extends TestCase
 {    
@@ -33,10 +35,8 @@ class SongTest extends TestCase
     {
         $song = Song::factory()->make();  
         $this->assertInstanceOf(Song::class, $song);
-        /* $this->assertContains("Mountaineer", $songs[0]->toArray());
-        $this->assertContains("Soundroll", $songs[1]->toArray());
-        $this->assertContains("Soul", $songs[2]->toArray());
-        $this->assertContains("Permafrost", $songs[3]->toArray()); */
+        //test if URL is properly created
+        $this->assertEquals('/storage/audio/'.Str::slug($song->artist).'-'.Str::slug($song->title).'.mp3', $song->src);
     }
 
     /**
