@@ -32,6 +32,13 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
+    - name: Unzip default songs
+      run: |
+        mkdir storage/app/public/audio
+        mkdir storage/app/public/img
+        unzip songs.zip -d storage/app/public/audio
+        cp public/img/mp3_fallback.png storage/app/public/img
+        php artisan storage:link
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         APP_ENV: testing
