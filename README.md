@@ -2,7 +2,23 @@
 
 ## Overview
 
-This application is an example music player created in Laravel and Vue.js
+This application is an example music player created in Laravel and Vue.js. Half-done by following instructions from the [DesignatedCoder](https://www.youtube.com/watch?v=YvOnVi1aiDk) video, now I am using it as a TDD project (with PHPUnit and Git Hooks/GitHub Actions) with automatic ID3 tag parsing and custom functions.
+
+## Installation
+
+After git clone:
+
+- composer install
+- php artisan migrate
+- php artisan db:seed
+- npm run
+
+## Coming soon
+
+- form for insert new song
+- autofill from ID3 tags of uploaded mp3s
+- massive upload from zipped/multiple select/dropzone
+- connection to MusPy API to follow favourite artists and get notified when new albums get published
 
 ## Music from Uppbeat (free for Creators!):
 

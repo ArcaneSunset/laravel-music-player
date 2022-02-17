@@ -77,4 +77,17 @@ class SongTest extends TestCase
         $data = $this->song->idTwo($mp3->tags2);
         $this->assertContains('Mountaineer', $data);
     }
+
+    /**
+     * Test songs on main 
+     * 
+     */
+    public function test_home()
+    {
+        $this->seed();
+        $songs = Song::all();
+        $response = $this->getJson('/');
+        $response->assertOk();
+        //todo - test Inertia components or just use Jest
+    }
 }
