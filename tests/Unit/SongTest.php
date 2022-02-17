@@ -65,7 +65,7 @@ class SongTest extends TestCase
      */
     public function test_id3_function()
     {
-        $path = '/var/www/music-player/public/storage/audio/farewell-mountaineer.mp3';
+        $path = public_path('storage/audio/farewell-mountaineer.mp3');
         $mp3 = new Mp3Info($path, true);
         $this->assertArrayHasKey('TIT2', $mp3->tags2);
         $this->song
