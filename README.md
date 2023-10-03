@@ -8,10 +8,13 @@ This application is an example music player created in Laravel and Vue.js. Half-
 
 After git clone:
 
-- composer install
-- php artisan migrate
-- php artisan db:seed
-- npm run
+- copy .env.example and set the environment variables
+- extract songs.zip to `public/songs/`
+- `php artisan key:generate`
+- `composer install`
+- `php artisan migrate`
+- `php artisan db:seed`
+- `npm run`
 
 ## Coming soon
 
